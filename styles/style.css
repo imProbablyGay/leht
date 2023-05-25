@@ -26,6 +26,9 @@ body {
   font-size: 40px;
   padding: 0;
 }
+.navbar-brand img {
+  height: 50px;
+}
 .navbar a {
   color: black !important;
   font-weight: 600;
