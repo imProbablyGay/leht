@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="styles/style.css" rel="stylesheet">
+	
+    <title>contact</title>
+   <script>
+   $(document).ready(function(){   $("#navkoht").load("nav.html");   });
+   $(document).ready(function(){   $("#footerkoht").load("footer.html");   });
+   </script>
+  </head>
+  <body>
+  <div id="navkoht"></div>
+
+    <div class="contact section">
+        <div class="container">
+            <div class="contact-title pb-4 text-center">
+                <h2>CONTACT US</h2>
+            </div>
+
+            <div class="row contact-persons justify-content-center">
+                <div class="contact-person col-2">
+                    <img src="images/kontakt2.png" alt="">
+                    <span>ANNA MARIA OREL</span>
+                </div>
+
+                <div class="contact-person col-2">
+                    <img src="images/kontakt1.png" alt="">
+                    <span>GERD KANTER</span>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-6">
+                    <form action="" class="contact-form">
+                        <input required type="text" placeholder="Nimi"><br>
+                        <input required type="tel" placeholder="Telefon"><br>
+                        <input required type="email" placeholder="Email"><br>
+                        <textarea required placeholder="Tekst"></textarea><br>
+                        <div class="justify-content-center d-flex">
+                            <input class="submit" type="submit" value="SAADA">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+  <div id="footerkoht"></div>
+  </body>

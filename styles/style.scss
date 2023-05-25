@@ -1,0 +1,307 @@
+body {
+    padding-top: 50px;
+    font-family: helvetica;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+}
+
+.section {padding-top: 40px;flex-grow: 3;}
+
+.navbar {
+    padding: 0;
+    min-height: 50px;
+    background: white;
+    box-shadow: 0px 0px 3px lightgrey;
+
+    &-brand {
+        font-weight: 700 !important;
+        font-size: 40px;
+        padding: 0;
+    }
+
+    a {
+        color:black !important;
+        font-weight: 600;
+
+        &.nav-link:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &-nav {
+        display: flex;
+        justify-content: space-between;
+        max-width: 600px;
+        width: 100%;
+    }
+
+
+    &-toggler {
+        position: relative;
+        width: 30px;
+        height: 20px;
+        margin: 15px 0;
+        box-shadow: none !important;
+        border:none !important;
+        margin-left: 4px;
+
+        &:not(.collapsed) {
+            .bar {
+                &-1 {transform: rotate(45deg);top:50%;}
+                &-2 {transform: scale(0);}
+                &-3 {transform: rotate(-45deg);top:50%;}
+            }
+        }
+    }
+    .bar {
+        width: 100%;
+        height: 2px;
+        background: black;
+        position: absolute;
+        left: 0;
+        transition: .2s;
+
+        &-1 {
+            top: 0px;
+        }
+
+        &-2 {
+            top:50%;
+        }
+
+        &-3 {
+            top:100%;
+        }
+    }
+}
+
+.main {
+    min-height: calc(100vh - 50px);
+    background-image: url('../images/HOMEpilt.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 70% top;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &-text {
+        color:white;
+        padding-bottom: 30px;
+        padding-top: 30px;
+        font-weight: bold;
+
+        &-title {
+            padding-left: 20px;
+            border-left:10px solid white;
+
+            h3 {font-size: 50px;}
+            h1 {font-size: 90px;}
+        }
+
+        p {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            font-size: 30px;
+        }
+
+        a {
+            color:white;
+            text-decoration: none;
+            border: 2px solid white;
+            padding: 10px;
+            border-radius: 10px;
+            transition: .3s;
+
+            &:hover {
+                color:black;
+                background: white;
+            }
+        }
+    }
+}
+
+.about {
+    &-text {
+        background: rgb(94, 172, 89);
+        padding: 30px;
+        color: rgb(44, 44, 44);
+        
+        h2 {padding-bottom: 30px;}
+        p {line-height: 2; font-size: 20px;padding-bottom: 10px;}
+
+        &-achieve {
+            display: flex;
+            flex-direction: column;
+            padding: 10px 0;
+
+            span {font-weight: bold;font-size: 22px;}
+        }
+
+        &-content {
+            margin: 0 auto;
+            max-width: 500px;
+        }
+    }
+
+    &-image {
+        padding: 0;
+        display: flex;
+        align-items: center;
+        img {
+            display: block;
+            width: 100%;
+        }
+    }
+}
+
+.media {
+    padding-bottom: 30px;
+    .carousel-item {
+        height: 450px;
+        background: lightgrey;
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
+        }
+    }
+
+    &-controls {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-gap:5px;
+        height: 450px;
+
+        div {display: flex; align-items: center;justify-content: center;overflow: hidden;}
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &-video-content {
+        position: relative;
+        width: calc(100%);
+        height: 0;
+        padding-bottom: 56.25%;
+        margin-bottom: 20px;
+
+        iframe {
+            position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+        }
+    }
+}
+
+.contact {
+    &-person {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        span {
+            padding-top: 10px;
+            font-weight: bold;
+        }
+
+        img {
+            max-width: 100px;
+        }
+    }
+
+    &-form {
+        padding: 50px 0 100px;
+
+        input:not(.submit), textarea{
+            width: 100%;
+            border:none;
+            border: 1px solid grey;
+            border-radius: 10px;
+            padding: 10px;
+            outline: none;
+            margin: 10px 0;
+
+            &:hover, &:focus {
+                border-color:black;
+            }
+        }
+
+        textarea {
+            border:1px solid grey;
+            min-height: 100px;
+            padding: 10px;
+            border-radius: 10px;
+
+            &:hover, &:focus {
+                border-color:black;
+            }
+        }
+
+        .submit {
+            background: white;
+            color:black;
+            border: 1px solid grey;
+            outline: none;
+            padding: 10px 30px;
+            border-radius: 10px;
+            transition: .3s;
+
+            &:hover {
+                background: black;
+                color:white;
+            }
+        }
+    }
+}
+
+
+.footer {
+    margin-top: 50px;
+    background: rgb(161, 161, 161);
+    text-align: center;
+    padding: 20px 0;
+    &-text {
+        a {color:white;text-decoration: none;}
+        p {color:white;margin: 0;}
+    }
+
+    &-light {
+        footer {
+            background: white;
+            a,p {color:black !important;}
+        }
+    }
+}
+
+
+
+@media screen and (max-width:992) {
+    .main {
+        &-text {
+            h3 {font-size: 30px;}
+            h1 {font-size: 50px;}
+        }
+    }
+}
+
+@media screen and (max-width:767px) {
+    .main {
+        &-text {
+            h3 {font-size: 30px;}
+            h1 {font-size: 50px;}
+        }
+    }
+}
